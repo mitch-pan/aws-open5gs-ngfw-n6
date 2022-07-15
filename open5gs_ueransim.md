@@ -79,7 +79,7 @@ bucket_id = "bootstrap-<suffix>"
 ```
 
 
-Replace the public IP address with the one from your output, and connect to the Ubuntu server.
+Use the output values from your terraform run to connect to the different Ubuntu servers and the NGFW.
 
 
 ### Install open5GS on Ubuntu-EPC
