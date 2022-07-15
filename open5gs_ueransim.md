@@ -99,7 +99,7 @@ sudo apt install open5gs -y
 
 ### Install open5GS on Ubuntu-UPF
 
-SSH to the Ubuntu-EPC server (see output from terraform for exact command), and then run the following commands:
+SSH to the Ubuntu-UPF server (see output from terraform for exact command), and then run the following commands:
 
 
 ```
