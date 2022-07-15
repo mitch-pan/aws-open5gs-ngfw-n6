@@ -1,7 +1,11 @@
 # aws-open5gs-ngfw-n6
-This repository contains terraoform templates to deploy an AWS VPC with three subnets.  Three VMs are
+This repository contains terraoform templates to deploy an AWS VPC with three subnets and four VMs, one of which 
+is a Palo Alto Networks NGFW residing on the 5G N6 interface.  Three Ubuntu VMs are
 deployed in the "private" subnet to support the open5GS packet core and the UERANSIM simulator.  The steps
 to configure the open5GS cor and UERANSIM are included [here](open5gs_ueransim.md).
+
+The Palo Alto Networks VM is [boostrapped](https://docs.paloaltonetworks.com/vm-series/10-2/vm-series-deployment/bootstrap-the-vm-series-firewall/bootstrap-the-vm-series-firewall-in-aws) (using Palo Alto Networks terraform modules) so that it spins up fully configured for allowing secure SSH access
+into the Ubuntu servers, as well as inspection and NAT of outbound traffic from the packet core.
 
 ## Deployment Steps
 
