@@ -7,6 +7,11 @@ to configure the open5GS cor and UERANSIM are included [here](open5gs_ueransim.m
 The Palo Alto Networks VM is [boostrapped](https://docs.paloaltonetworks.com/vm-series/10-2/vm-series-deployment/bootstrap-the-vm-series-firewall/bootstrap-the-vm-series-firewall-in-aws) (using Palo Alto Networks terraform modules) so that it spins up fully configured for allowing secure SSH access
 into the Ubuntu servers, as well as inspection and NAT of outbound traffic from the packet core.
 
+NOTE: These templates should not be used for a production deployment.  For a production grade architecutre multiple Availability Zones and 
+NGFWs should be used, as show in the Palo Alto Networks [AWS Reference Architecture Guide](https://www.paloaltonetworks.com/resources/guides/intelligent-architectures-aws-reference-architecture)
+
+![alt_text](images/aws_open5gs_arch.png "webui logon screen")
+
 ## Deployment Steps
 
 1. Download this repo
