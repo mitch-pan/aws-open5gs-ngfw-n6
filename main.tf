@@ -6,7 +6,7 @@ provider "aws" {
 
 module "secure_5g_vpc" {
   source = "PaloAltoNetworks/vmseries-modules/aws//modules/vpc"
-  version = "0.2.0"
+  #version = "0.4.1"
 
   name                    = var.security_vpc_name
   cidr_block              = var.security_vpc_cidr
@@ -20,7 +20,7 @@ module "secure_5g_vpc" {
 
 module "vmseries_subnet_set" {
   source = "PaloAltoNetworks/vmseries-modules/aws//modules/subnet_set"
-  version = "0.2.0"
+  #version = "0.4.1"
 
   for_each = toset(distinct([for _, v in var.security_vpc_subnets : v.set]))
 
@@ -32,7 +32,7 @@ module "vmseries_subnet_set" {
 
 module "vmseries-modules_vmseries" {
   source   = "PaloAltoNetworks/vmseries-modules/aws//modules/vmseries"
-  version = "0.2.0"
+  #version = "0.4.1"
 
   for_each = var.vmseries
 
